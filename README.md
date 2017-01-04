@@ -1,1 +1,1 @@
-# Mega card detector by KIKIMIKI and NAGIBATORLALOK228DEMON
+# Software to recognize numbers on bank card
