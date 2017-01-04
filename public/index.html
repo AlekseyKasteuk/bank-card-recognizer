@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Draw</title>
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+	<script type="text/javascript" src="./bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="./tesseract.js/dist/tesseract.js"></script>
+</head>
+<body>
+	<div class="spinner-wrapper" style="display: none;">
+		<div class="spinner circles">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<div class="image-selection">
+		<div style="display: none;">
+			<input type="file" id="file-getter" onchange="setImageToCanvas()" accept="image/x-png, image/gif, image/jpeg">
+		</div>
+		<div>
+			<button onclick="document.getElementById('file-getter').click()">Выбрать изображение</button>
+		</div>
+		<div>
+			<button onclick="originalImage()">Оригинальное изображеине</button>
+		</div>
+		<div>
+			<button onclick="rezkost()">Увеличение резкости</button>
+		</div>
+		<div>
+			<button onclick="sobel()">Метод Собеля (границы)</button>
+		</div>
+		<div>
+			<button onclick="blackAndWhite()">Черно-белый</button>
+		</div>
+		<div>
+			<button onclick="medians()">Метод медиан</button>
+		</div>
+		<div>
+			<button onclick="canny()">Канни</button>
+		</div>
+		<div>
+			<button onclick="allFilters()">Все фильтры</button>
+		</div>
+		<div>
+			<button onclick="recognize()">Распознать</button>
+		</div>
+		<div>
+			<button onclick="cropNumber()">Вырезать номер</button>
+		</div>
+	</div>
+	<div class="work-place">
+		<div class="filters">
+		</div>
+		<div class="canvas">
+			<canvas id="canvas"></canvas>
+		</div>
+	</div>
+	<script type="text/javascript" src='./script/script.js'></script>
+</body>
+</html>
